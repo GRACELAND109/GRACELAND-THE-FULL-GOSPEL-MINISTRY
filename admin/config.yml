@@ -5,20 +5,30 @@ backend:
   base_url: https://sveltia-cms-auth.graceland-the-full-gospel.workers.dev
   auth_endpoint: auth
 
-media_folder: "images/uploads"
-public_folder: "/images/uploads"
+media_folder: images/uploads
+public_folder: /images/uploads
 
 site_url: https://graceland109.github.io/GRACELAND-THE-FULL-GOSPEL-MINISTRY/
 
 collections:
-  - name: "gallery"
-    label: "Moments From Graceland"
-    label_singular: "Photo"
-    folder: "_data/gallery"
+  - name: gallery
+    label: Moments From Graceland
+    label_singular: Photo
+    folder: _data/gallery
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - { label: "Photo", name: "image", widget: "image" }
-      - { label: "Caption", name: "caption", widget: "string" }
-      - { label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false, required: false }
-      Add CMS config
+      - label: Photo
+        name: image
+        widget: image
+      - label: Caption
+        name: caption
+        widget: string
+      - label: Date
+        name: date
+        widget: datetime
+        format: YYYY-MM-DD
+        date_format: YYYY-MM-DD
+        time_format: false
+        required: false
+        FIX YAML indentation
