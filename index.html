@@ -31,7 +31,7 @@ header{height:76px;position:sticky;top:0;z-index:10;background:#ffffffef;backdro
   if (!container) return;
   const REPO = 'graceland109/GRACELAND-THE-FULL-GOSPEL-MINISTRY';
   const BRANCH = 'main';
-  const apiBase = https://api.github.com/repos/${REPO}/contents/_data/gallery?ref=${BRANCH};
+  const apiBase = 'https://api.github.com/repos/'+ REPO + '/contents/_data/gallery?ref='+ BRANCH;
   try {
     const res = await fetch(apiBase, { headers: { 'Accept': 'application/vnd.github+json' } });
     if (!res.ok) throw new Error('Cannot list gallery files');
